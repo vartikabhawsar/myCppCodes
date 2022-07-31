@@ -12,18 +12,18 @@ int main()
     {
         cin>>a[i];
     }
-    int lcm=a[0];
+    int hcf=a[0];
     for(int i=1;i<n;i++)
     {
-        for(int j=lcm;j<=lcm*a[i];j++)
+        for(int j=hcf;j>=1;j--)
         {
-            if(j%lcm==0 && j%a[i]==0)
+            if(hcf%j==0 && a[i]%j==0)
             {
-                lcm=j;
+                hcf=j;
                 break;
             }
         }
 
     }
-    cout<<lcm;
+    cout<<hcf;
 }
