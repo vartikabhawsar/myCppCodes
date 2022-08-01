@@ -1,8 +1,9 @@
-#include<iostream>
+#include <iostream>
+#include <climits>
 using namespace std;
 int main()
 {
-    int n,max,sum=0;
+    int n,max=INT_MIN,sum=0;
     cout<<"enter the size of array\n";
     cin>>n;
     int a[n];
@@ -14,7 +15,7 @@ int main()
     for(int i=0;i<n;i++)
     {
         sum=0;
-        for(int j=i;i<n;i++)
+        for(int j=i;j<n;j++)
         {
             sum+=a[j];
 
