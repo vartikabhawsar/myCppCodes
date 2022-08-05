@@ -4,7 +4,7 @@ int main()
 {
     
     int i=0;
-    char a;
+    char a[30];
     cout<<"enter the string";
     cin.getline(a,30);
     while(a[i]!='\0')
