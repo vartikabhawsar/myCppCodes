@@ -5,7 +5,7 @@ int sum(int a,int b)
     return a+b;
 
 }
-float sum(float a,float b)
+float sum(int a,int b)
 {
     return a+b;
 
