@@ -29,7 +29,7 @@ complex complex ::operator -(complex cb)
     c5.y=y-cb.y;
     return c5;
 }
-void display(void)
+ void complex ::  display(void)
 {
     cout<<x<<" + "<<y<<"i "<<"\n";
 }
@@ -56,7 +56,7 @@ int main()
 
 
     }
-        cout<<" "<<c2.display();
-        cout<<" "<<c3.display();
-        cout<<" "<<c4.display();
+        c2.display();
+      c3.display();
+    c4.display();
 }
