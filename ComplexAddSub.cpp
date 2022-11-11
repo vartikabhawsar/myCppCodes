@@ -7,7 +7,7 @@ class complex
     public:
     void display();
     
-    complex (int real,int img) 
+    complex (int real, int img) 
     {
         x=real;
         y=img;
@@ -15,29 +15,29 @@ class complex
     complex operator +(complex ca);
     complex operator -(complex cb);
 };
-complex complex ::operator +(complex ca)
+complex complex::operator +(complex ca)
 {
-    complex c1;
+    complex c1(0,0);  //c4    0,0 for constructor
     c1.x=x+ca.x;
     c1.y=y+ca.y;
-    return c1;
+    return c1;  //c4
 }
-complex complex ::operator -(complex cb)
+complex complex::operator -(complex cb)
 {
-    complex c5;
+    complex c5(0,0);   //c4
     c5.x=x-cb.x;
     c5.y=y-cb.y;
-    return c5;
+    return c5;      //c4
 }
- void complex ::  display(void)
+ void complex :: display(void)
 {
-    cout<<x<<" + "<<y<<"i "<<"\n";
+    cout<< x <<" + "<< y <<"i "<<"\n";
 }
 int main()
 {
-    complex c2,c3,c4;
-    c2=complex(2,3);
-    c3=complex(5,4);
+    complex c4(0,0);  //for constructor agar contructor nai lete to input() banate
+    complex c2(2,3);
+    complex  c3(5,4);
     int a;
     cout<<"enter 1 for add and 2 for sub";
     cin>>a;
@@ -45,10 +45,18 @@ int main()
     {
         case 1:
         c4=c2+c3;
+        c2.display();
+        c3.display();
+    
+        c4.display();
        
         break;
         case 2:
         c4=c2-c3;
+        c2.display();
+        c3.display();
+    
+        c4.display();
        
         break;
         default:
@@ -56,7 +64,5 @@ int main()
 
 
     }
-        c2.display();
-      c3.display();
-    c4.display();
+    
 }
